@@ -1,12 +1,12 @@
 import React from 'react';
-import  
 
-const ShoppingItem = () => {
+const ShoppingItem = (props) => {
+  const { name, price, amount } = props;
   return (
     <div className="item">
-      <span className="item__name">"Jablko</span>
-      <span className="item__price">"30 Kc</span>
-      <span className="item__amount">20 ks</span>
+      <span className="item__name">"{name}</span>
+      <span className="item__price">{price}</span>
+      <span className="item__amount">{amount}</span>
     </div>
   );
 };
