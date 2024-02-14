@@ -6,10 +6,15 @@ const ListOfProducts = (props) => {
 
   const mappedHeader = <h1>{header}</h1>;
   const mappedProducts = products.map((o) => (
-    <ShoppingItem name={o.name} price={o.price} amount={o.amount} />
+    <ShoppingItem key={o.id} name={o.name} price={o.price} amount={o.amount} />
   ));
 
-  return <>(mappedHeader) (mappedProducts)</>;
+  return (
+    <>
+      {mappedHeader}
+      {mappedProducts}
+    </>
+  );
 };
 
 export default ListOfProducts;
